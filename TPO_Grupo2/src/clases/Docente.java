@@ -4,13 +4,15 @@ import java.util.List;
 
 public class Docente {
     private String nombre;
+    private String id;
     private int antiguedad;
     private boolean conocimientosIngles;
     private List<Integer> calificaciones = new ArrayList<>();
     private List<Curso> cursosAsignados = new ArrayList<>();
 
-    public Docente(String nombre, int antiguedad, boolean conocimientosIngles) {
+    public Docente(String nombre, String id, int antiguedad, boolean conocimientosIngles) {
         this.nombre = nombre;
+        this.id = id;
         this.antiguedad = antiguedad;
         this.conocimientosIngles = conocimientosIngles;
     }
@@ -62,4 +64,16 @@ public class Docente {
     public List<Curso> getCursosAsignados() {
         return cursosAsignados;
     }
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public void setCursosAsignados(List<Curso> cursosAsignados) {
+		this.cursosAsignados = cursosAsignados;
+	}
 }
